@@ -1,0 +1,168 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #d1e2e4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: skyblue;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box {
+  width: 1400px;
+  height: 80px;
+  font-size: 18px;
+  background-color: white;
+  color: #282c34;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box2 {
+  width: 200px;
+  height: 80px;
+  font-size: 30px;
+  color: #282c34;
+  border: 1px black solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miskas {
+  width: 1600px;
+  display: flex;
+  height: auto;
+  background-color: WHITE;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0px 200px 0px 200px;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  padding-top: 15px;
+  border: 2px solid black;
+}
+
+.top-list {
+  display: flex;
+}
+
+.insidebox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 1400px;
+  justify-content: space-around;
+  
+}
+
+.insidebox2 {
+  display: grid;
+}
+
+.insidebox3 {
+  display: flex;
+  width: 800px;
+}
+
+.boxs {
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.box3{
+  width: 900px;
+  height: 80px;
+  font-size: 18px;
+  background-color: white;
+  color: #282c34;
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}
+
+.box4 {
+  width: 150px;
+  height: 80px;
+  font-size: 30px;
+  color: #282c34;
+  border: 1px black solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.centr {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+button {
+  width: 300px;
+  height: 100px;
+  margin: 30px;
+  background-color: orange;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+.centr2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.left {
+  width: 600px;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-left: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(219, 210, 210);
+  font-size: 16px;
+}
+
+.inside {
+  display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.middle {
+  display: flex;
+}
