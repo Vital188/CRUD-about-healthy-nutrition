@@ -18,9 +18,9 @@ function New() {
           console.log(typeof(change))
 
     useEffect (() => {
-      if (change !== Number)
+      if (change === null )
       {setInfo()}
-      if (change < 18.5) 
+      if (change < 18.5 && change > 5) 
       {setInfo('You have underweight. You need to improve yours diet. Everything will be ok 😊')}
       if (change > 18.5 && change < 24.9)
       {setInfo('Yours weight is perfect. Keep your diet and activity as always. 😊')}
@@ -43,7 +43,7 @@ function New() {
         setHeight('');
         setSteps('');
         setKmi('');
-        setInfo('')
+        setInfo('');
     }
 
     const handleEnter = (e) => {

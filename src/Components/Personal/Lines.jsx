@@ -101,6 +101,17 @@ function Lines  ({per, remove}) {
     </div>    
   </div>
   </div>
+  <div className="box7">
+    <h1>Our proposition for you:</h1>
+    <ul>
+      <li>Comparing yours age, sex and weight you need calories</li>
+      <li>Breakfast consist from calories, lunch from caloris, dinner from calories</li>
+      <li>Try to make up to 10000 steps per day</li>
+      <li>Smile everyday 😊</li>
+      TEE for men  = 864 − 9.72 × age + PA × (14.2 × weight + 503 × height)
+TEE for women  = 387 − 7.31 × age + PA × (10.9 × weight + 660.7 × height)
+    </ul>
+  </div>
 </div>    
   
 
