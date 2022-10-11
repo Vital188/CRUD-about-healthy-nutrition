@@ -2,18 +2,16 @@ import { useEffect, useState } from "react";
 import { create } from "../../Functions/localStorage";
 
 
-function Createlist ({age, sex, height, weight, steps, remove, change}) {
+function Createlist ({age, sex, height, weight, steps, remove, change, info}) {
 
-    const [createData, setCreateData] = useState(null);
-  
-    
+    const [createDatas, setCreateDatas] = useState(null);
     const key = 'personal';
     useEffect(() => {
-        if (null === createData) {
+        if (null === createDatas) {
           return;
         }
-        create(key, createData);
-      }, [createData]);
+        create(key, createDatas);
+      }, [createDatas]);
 
     // const add = () => {
     //     let fav =  [];
@@ -25,13 +23,13 @@ function Createlist ({age, sex, height, weight, steps, remove, change}) {
     //   };  
 
       const add = () => {
-        setCreateData({
+        setCreateDatas({
           age,
-          sex: JSON.stringify(sex),
+          sex,
           height,
           weight,
           steps,
-        
+          info
         });
         remove()
       };
@@ -109,8 +107,9 @@ function Createlist ({age, sex, height, weight, steps, remove, change}) {
       <div className="five">
       big obese</div>
       <div className="six">
-      extremely obese</div>
+      huge obese</div>
     </div>
+    <div className="add">{info}</div>
     </div>
     </div>
     )

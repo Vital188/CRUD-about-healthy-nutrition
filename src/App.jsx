@@ -36,8 +36,8 @@ const navigateToNew = () => {
     <div className='centr'>
     <button onClick={navigateToHome}>HOME</button>
     <button onClick={navigateToList}>PRODUCTS LIST</button>
-    <button onClick={navigateToEdit}>Personal information</button>
     <button onClick={navigateToNew}>NEW PRODUCT</button>
+    <button onClick={navigateToEdit}>Personal information</button>
     </div>
     <div>
     <Routes>

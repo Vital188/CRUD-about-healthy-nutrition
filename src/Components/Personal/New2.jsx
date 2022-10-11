@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Createlist from "./Createlist2";
 
 function New() {
@@ -9,10 +9,32 @@ function New() {
     const [height, setHeight] = useState('');
     const [steps, setSteps] = useState('');
     const [kmi, setKmi] = useState('');
-    const [indeks, setIndeks] = useState('')
+    // const [indeks, setIndeks] = useState('')
+    const [info, setInfo] = useState('')
 
-    const change  = (weight/(height*height/10000)).toFixed(2) 
-          console.log(change)
+
+    const change  =  isNaN((weight/(height*height/10000)).toFixed(2)) || !isFinite((weight/(height*height/10000)).toFixed(2)) ? '' : (weight/(height*height/10000)).toFixed(2)
+    
+          console.log(typeof(change))
+
+    useEffect (() => {
+      if (change !== Number)
+      {setInfo()}
+      if (change < 18.5) 
+      {setInfo('You have underweight. You need to improve yours diet. Everything will be ok 😊')}
+      if (change > 18.5 && change < 24.9)
+      {setInfo('Yours weight is perfect. Keep your diet and activity as always. 😊')}
+      if (change > 25 && change < 29.9)
+      {setInfo('Your have little bit overweight. Improve yours diet and everything will be ok 😊')}
+      if (change > 30 && change < 34.9)
+      {setInfo('Your have overweight. Increase yours physical activity and improve yours diet and everything will be ok 😊')}
+      if (change > 35 && change < 39.9)
+      {setInfo('Your need seriuosly improve yours physical activity and diet and everything will be ok 😊')}
+      if (change > 40 )
+      {setInfo('Your need seriuosly improve yours physical activity and diet and everything will be ok 😊')}
+    }, [change])
+
+
 
     const remove = () => {
         setAge('');
@@ -21,6 +43,7 @@ function New() {
         setHeight('');
         setSteps('');
         setKmi('');
+        setInfo('')
     }
 
     const handleEnter = (e) => {
@@ -128,7 +151,7 @@ function New() {
      <div className="box4">Steps</div>
      <div className="box4">BMI</div>
      </div><div>
-     <Createlist remove={remove} age={age} sex={sex} weight={weight} height={height} steps={steps} change={change} />
+     <Createlist remove={remove} age={age} sex={sex} weight={weight} height={height} steps={steps} change={change} info={info}/>
      </div></div>
     </div></div>
     </div>
