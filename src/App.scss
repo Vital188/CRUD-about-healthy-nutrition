@@ -1,3 +1,11 @@
+body {
+  background-image: url("./Components/Image/food.png");
+ }
+
+
+.photo {
+  background-image: none;
+} 
 .App {
   text-align: center;
 }
@@ -180,4 +188,70 @@ button {
   margin-left: 380px;
   margin-top: -28px;
   margin-bottom: -59px;
+}
+
+.one {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.two {
+  width: 150px;
+  height: 50px;
+  background-color: grey;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.three {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(49, 49, 222);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.four {
+  width: 150px;
+  height: 50px;
+  background-color: green;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.five {
+  width: 150px;
+  height: 50px;
+  background-color: gold;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.six {
+  width: 150px;
+  height: 50px;
+  background-color: crimson;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
 }

@@ -4,6 +4,7 @@ import New from './Components/New';
 import List from './Components/List';
 import Prieview from './Components/Prieview';
 import Edit from './Components/Edit'
+import New2 from './Components/Personal/New2';
 
 function App() {
 
@@ -22,7 +23,7 @@ const navigateToHome = () => {
 
 const navigateToEdit = () => {
   // 👇️ navigate to /
-  navigate('/edit');
+  navigate('/new2');
 };
 
 const navigateToNew = () => {
@@ -34,15 +35,15 @@ const navigateToNew = () => {
     <div>
     <div className='centr'>
     <button onClick={navigateToHome}>HOME</button>
-    <button onClick={navigateToList}>LIST</button>
-    <button onClick={navigateToEdit}> EDIT</button>
-    <button onClick={navigateToNew}>NEW</button>
+    <button onClick={navigateToList}>PRODUCTS LIST</button>
+    <button onClick={navigateToEdit}>Personal information</button>
+    <button onClick={navigateToNew}>NEW PRODUCT</button>
     </div>
     <div>
     <Routes>
     <Route path="/" element={<List/>} /> 
     <Route path="/prieview" element={<Prieview />} /> 
-    <Route path="/edit" element={<Edit />} />
+    <Route path="/new2" element={<New2 />} />
     <Route path="/new" element={<New />} />
     </Routes> 
     </div>
