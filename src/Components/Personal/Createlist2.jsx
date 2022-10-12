@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { create } from "../../Functions/localStorage";
+
 
 
 function Createlist ({age, sex, height, weight, steps, remove, change, info}) {
@@ -31,7 +32,8 @@ function Createlist ({age, sex, height, weight, steps, remove, change, info}) {
           steps,
           info
         });
-        remove()
+        remove();
+       
       };
 
     return (
@@ -46,7 +48,7 @@ function Createlist ({age, sex, height, weight, steps, remove, change, info}) {
      <div>
         <button onClick={add} style={{
             position: 'absolute',
-            top: '504px',
+            top: '524px',
             left: '1190px',
             width: '200px',
             backgroundColor: 'red',
@@ -55,7 +57,7 @@ function Createlist ({age, sex, height, weight, steps, remove, change, info}) {
         }}>Add personal information</button>
         <button onClick={remove} style={{
             position: 'absolute',
-            top: '504px',
+            top: '524px',
             left: '1500px',
             width: '200px',
             backgroundColor: '#00bcd4',
@@ -69,7 +71,7 @@ function Createlist ({age, sex, height, weight, steps, remove, change, info}) {
     <div style={{
       display: 'flex',
       position: 'absolute',
-      top: '650px',
+      top: '670px',
       left: '1012px',
       weight: 'auto',
       height: '320px',

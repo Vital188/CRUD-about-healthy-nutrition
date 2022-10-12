@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Line from "./Line";
 import { read } from "../Functions/localStorage";
 
+
 function List() {
 
 const [product, setProduct] = useState(null)
@@ -32,7 +33,7 @@ return (
       </div>
       <div>
       {
-        product?.map((pr) => (<Line key={pr.id} pr={pr}/>))
+        product?.map((pr) => (<Line  key={pr.id} pr={pr}/>))
       }
       </div>
       </>

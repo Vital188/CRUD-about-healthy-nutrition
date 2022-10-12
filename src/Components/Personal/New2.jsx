@@ -55,7 +55,10 @@ function New() {
     return (
      <div className="photo">
      <div>
-    <h1 className="centr">Please, fill up the table below:</h1>
+    <h1 style={{
+        fontSize: '40px',
+        color: 'crimson'
+    }} className="centr">Please, fill up the table below:</h1>
     </div>
     <div className="middle">
     <div className="left">
@@ -73,15 +76,20 @@ function New() {
         }}></input>
         </div>
         <div className="inside">
-        <label>Sex:</label>
-        <input type='text' value={sex}  onChange={(e) => setSex(e.target.value)}
-        placeholder="Please, write yours sex..."
+        <label>Please, choose your <b> sex:</b></label>
+        <select value={sex} onChange={(e) => setSex(e.target.value)} 
         style={{
             width: '400px',
             height: '50px',
             borderRadius: '5px',
             fontSize: '20px'
-        }}></input>
+        }}>
+             <option value={0} disabled>
+            Please, choose your sex...
+            </option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+        </select>
         </div>
         <div className="inside">
         <label>Weight (kg):</label>

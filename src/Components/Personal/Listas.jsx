@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { read } from "../../Functions/localStorage";
-import Lines from "./Lines"
+import Lines from "./Lines";
+
 
 function Listas() {
 
@@ -24,7 +25,9 @@ const remove = () => {
 return (
     <>
    
-   
+   {personal?.length === 0 && <div className='box8' >Please, fill up the form in the PERSONAL INFORMATION field.
+  It's help us to give you better recomendation !
+</div>}
       <div>
       {
         personal?.map((per) => (<Lines key={per.id} per={per} remove={remove}/>))
