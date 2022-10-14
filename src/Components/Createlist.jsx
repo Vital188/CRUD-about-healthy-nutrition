@@ -25,7 +25,7 @@ function Createlist ({protein, fat, weight, carb, calories, remove, product}) {
       const add = () => {
         setCreateData({
           product: JSON.stringify(product),
-          fat,
+          fat: parseFloat(fat),
           weight,
           carb,
           calories,

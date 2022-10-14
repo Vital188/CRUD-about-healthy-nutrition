@@ -84,7 +84,7 @@ function New() {
             borderRadius: '5px',
             fontSize: '20px'
         }}>
-             <option value={0} disabled>
+             <option value={0} >
             Please, choose your sex...
             </option>
                     <option value="male">male</option>

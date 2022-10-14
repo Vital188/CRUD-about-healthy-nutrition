@@ -25,8 +25,12 @@ const remove = () => {
 return (
     <>
    
-   {personal?.length === 0 && <div className='box8' >Please, fill up the form in the PERSONAL INFORMATION field.
+   {personal?.length === 0 && <div className='box8' style={{
+    padding: '30px',
+    lineHeight: '150%'
+   }} >Please, fill up the form in the PERSONAL INFORMATION field.
   It's help us to give you better recomendation !
+  Or you can start choose below you breakfast, lunch and dinner without our recomendation !
 </div>}
       <div>
       {

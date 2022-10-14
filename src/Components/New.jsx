@@ -48,7 +48,7 @@ function New() {
         </div>
         <div className="inside">
         <label>Fat (g):</label>
-        <input type='number' value={fat}  onChange={(e) => setFat(e.target.value)}
+        <input type='text' value={fat}  onChange={(e) => setFat(e.target.value)}
         placeholder="Please, write fat weight..."
         style={{
             width: '400px',

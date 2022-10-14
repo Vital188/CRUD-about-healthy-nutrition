@@ -41,8 +41,24 @@ const dinner1 = (dinner/100*90).toFixed(2);
 
 
     return (
-      
-      <div className="box5" >
+      <div style={{
+        
+      }}>
+      <div className='box8' style={{
+        padding: '30px',
+        lineHeight: '150%',
+        marginBottom: '50px',
+        display: "flex",
+
+       }} >Please, choose below you breakfast, lunch and dinner regarging our recomendation !
+       In NEW PRODUCT field you can add you favorite food. All proposed meal product you can find in 
+       PRODUCT LIST field.
+    </div>
+      <div className="box5" style={{
+     display: 'flex',
+     alignItems: 'center',
+     flexDirection: 'column'
+       }} >
  <div className="inside" style={{
     paddingTop: '0px'
  }}>
@@ -56,7 +72,7 @@ const dinner1 = (dinner/100*90).toFixed(2);
         height: '650px',
         flexDirection: 'column',
         alignItems: 'center',
-        width: 'auto'
+        width: '1400px'
     }}>
     <h1>Yours personal information</h1>
     
@@ -155,7 +171,7 @@ const dinner1 = (dinner/100*90).toFixed(2);
     </ul>
   </div>
 </div>    
-  
+  </div>
 
   
     )

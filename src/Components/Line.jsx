@@ -1,5 +1,3 @@
-import Prieview from "./Prieview"
-
 function Line  ({pr}) {
     return (
       <div className="box6">
