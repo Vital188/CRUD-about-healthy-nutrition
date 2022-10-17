@@ -93,7 +93,7 @@ useEffect(() => {
      <div className="box2">Delete</div>
     </div>
          {
-         selectProduct1.length > 0 && selectProduct1?.map(selectedID => product.filter(pr =>  pr.id === selectedID).map(pra => <Linetwo key={pra.id} pr={pra} sl={setSelectProduct1} sal={selectProduct1}/>))
+         selectProduct1.length > 0 && selectProduct1?.map(selectedID => product.filter(pr =>  pr.id === selectedID).map(pra => <Linetwo key={pra.id} pr={pra} sl={setSelectProduct1} sal={selectProduct1} prod={setProduct}/>))
         }
     </div>
 

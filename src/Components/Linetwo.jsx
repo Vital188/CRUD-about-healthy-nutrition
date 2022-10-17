@@ -1,23 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { destroy } from "../Functions/localStorage";
 
-function Linetwo ({pr, sl, sal}) {
+function Linetwo ({pr, sal, sl, prod}) {
 
- const [deletePr, setDeletePr] = useState(false);
-// const key = 'product';
-// useEffect(() => {
-//   remove(pr.id);
-// }, [setDeletePr]);
+// const [produc, setProduc] = useState(pr);
+// key = 'product'
 
 // const remove = () => {
-//   setDeletePr(true);
-//   // eslint-disable-next-line no-lone-blocks
-//  sl([]);
+// prod('')
 // }
 
-   if (pr === null) {
-     return;
-   }
-
+console.log(prod)
 
 
     return (
@@ -36,12 +29,15 @@ function Linetwo ({pr, sl, sal}) {
      <div className="box2">{pr.calories}</div>
      <div className="box2">{pr.weight}</div>
       <div className="box2" >
-        <input type="checkbox"
-        checked={deletePr} onChange={setDeletePr}
-        style={{
-          width: '50px',
-          height: '50px'
-        }}></input>
+      <button 
+   style={{
+    width: '143px',
+    height: '50px',
+    fontSize: '16px',
+    margin: '27px',
+    backgroundColor: 'green',
+    bordeRradius: '10px',
+  }}>Remove from list</button>
         </div> 
         </div>
         </div>

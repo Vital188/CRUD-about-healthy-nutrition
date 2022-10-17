@@ -28,7 +28,7 @@ useEffect(() => {
      <div className="box2">{pr.calories}</div>
      <div className="box2">{pr.weight}</div>
       <div className="box2" >
-        <input type="checkbox" style={{
+        <input type="checkbox" checked={true} style={{
           width: '50px',
           height: '50px'
         }} />

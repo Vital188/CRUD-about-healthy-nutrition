@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { read } from "../../Functions/localStorage";
 import Lines from "./Lines";
+import { destroy } from "../../Functions/localStorage";
 
 
 function Listas() {
 
 const [personal, setPersonal] = useState(null)
 const [lastUpdates, setLastUpdates] = useState(Date.now());
+const [deleteData, setDeleteData] = useState(null);
 const key = 'personal';
 
 useEffect(() => {
@@ -18,9 +20,13 @@ const b = localStorage.getItem("personal");    if (null === b) {
 setPersonal([]);    } else {
 setPersonal(JSON.parse(b));    }  }, []);
 
-const remove = () => {
-  setPersonal()
-}
+useEffect(() => {
+    if (null === deleteData) {
+      return;
+    }
+  destroy(key, deleteData.id);
+  setPersonal();
+}, [deleteData]);
 
 return (
     <>
@@ -34,7 +40,7 @@ return (
 </div>}
       <div>
       {
-        personal?.map((per) => (<Lines key={per.id} per={per} remove={remove}/>))
+        personal?.map((per) => (<Lines key={per.id} per={per} setDeleteData={setDeleteData}/>))
       }
       </div>
       </>

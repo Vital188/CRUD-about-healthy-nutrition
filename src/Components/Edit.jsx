@@ -38,110 +38,94 @@ const [weight, setWeight] = useState("");
         });
         setModalData(null);}    
 
-    return (
-        <div className="centr">
-        <div className="miskas">
-        <div className="four">
-                  <label
-                    for="exampleInputPassword1"
-                    
-                  >
-                    Change product name:
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    value={pr}
-                    onChange={(e) => setPr(e.target.value)}
-                    id="exampleInputPassword1"
-                  />
-                </div>
-                <div className="box2">
-                  <label
-                    for="exampleInputPassword1"
-                    
-                  >
-                    Change weight (grams):
-                  </label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    value={weight}
-                    onChange={(e) => setWeight(e.target.value)}
-                    id="exampleInputPassword1"
-                  />
-                </div>
-                <div className="box2">
-                  <label
-                    for="exampleInputPassword1"
-                    
-                  >
-                    Change carb (grams):
-                  </label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    value={carb}
-                    onChange={(e) => setCarb(e.target.value)}
-                    id="exampleInputPassword1"
-                  />
-                </div>
-                <div className="box2">
-                  <label
-                    for="exampleInputPassword1"
-                    
-                  >
-                    Change fat (grams):
-                  </label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    value={fat}
-                    onChange={(e) => setFat(e.target.value)}
-                    id="exampleInputPassword1"
-                  />
-                </div>
-                <div className="box2">
-                  <label
-                    for="exampleInputPassword1"
-                    
-                  >
-                    Change protein (grams):
-                  </label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    value={protein}
-                    onChange={(e) => setProtein(e.target.value)}
-                    id="exampleInputPassword1"
-                  />
-                </div>
-                <div className="box2">
-                  <label
-                    for="exampleInputPassword1"
-                    
-                  >
-                    Change calories:
-                  </label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    value={calories}
-                    onChange={(e) => setCalories(e.target.value)}
-                    id="exampleInputPassword1"
-                  />
-                </div>
+    return ( 
+    <div>
+      <div className="middle" style={{
+        justifyContent: 'flex-end',
+        marginRight: '434px',
+        marginTop: '40px'
+      }}>
+      <div className="left">
+          <h1>EDIT PRODUCT</h1>
+          <div className="inside">
+          <label>Product name:</label>
+          <input type='text' value={pr}   
+          placeholder="Please, write product name..."
+          style={{
+              width: '400px',
+              height: '50px',
+              borderRadius: '5px',
+              fontSize: '20px'
+          }}/>
+          </div>
+          <div className="inside">
+          <label>Fat (g):</label>
+          <input type='text' value={fat}  onChange={(e) => setFat(e.target.value)}
+          placeholder="Please, write fat weight..."
+          style={{
+              width: '400px',
+              height: '50px',
+              borderRadius: '5px',
+              fontSize: '20px'
+          }}></input>
+          </div>
+          <div className="inside">
+          <label>Carb (g):</label>
+          <input type='number' value={carb}  onChange={(e) => setCarb(e.target.value)} 
+          placeholder="Please, write carb weight..."
+          style={{
+              width: '400px',
+              height: '50px',
+              borderRadius: '5px',
+              fontSize: '20px'
+          }}></input>
+          </div>
+          <div className="inside">
+          <label>Protein (g):</label>
+          <input type='number' value={protein}  onChange={(e) => setProtein(e.target.value)}
+          placeholder="Please, write protein weight..."
+          style={{
+              width: '400px',
+              height: '50px',
+              borderRadius: '5px',
+              fontSize: '20px'
+          }}></input>
+          </div>
+          <div className="inside">
+          <label>Calories:</label>
+          <input type='number' value={calories}  onChange={(e) => setCalories(e.target.value)}
+          placeholder="Please, write calories quantity..."
+          style={{
+              width: '400px',
+              height: '50px',
+              borderRadius: '5px',
+              fontSize: '20px'
+          }}></input>
+          </div>
+          <div className="inside">
+          <label>Weight:</label>
+          <input type='number' value={weight}  onChange={(e) => setWeight(e.target.value)}
+          placeholder="Please, write product weight..."
+          style={{
+              width: '400px',
+              height: '50px',
+              borderRadius: '5px',
+              fontSize: '20px'
+          }}></input>
+          </div>
             <button onClick={save} style={{
-                position: 'absolute',
-                top: '504px',
-                left: '1190px',
+                // position: 'absolute',
+                // top: '504px',
+                // left: '1190px',
                 width: '200px',
-                backgroundColor: 'red',
+                backgroundColor: 'orange',
                 height: '80px',
                 cursor: 'pointer'
-            }}>Save</button>
-         </div>
-        </div>
+            }}>Save chagment</button>
+            
+            </div>
+     </div>  
+     </div>
     )
     }
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-function Lines  ({per, remove}) {
+function Lines  ({per, setDeleteData}) {
 
 const [pa, setPa] = useState('');
 const [total, setTotal] = useState('');
@@ -145,7 +145,7 @@ const dinner1 = (dinner/100*90).toFixed(2);
             cursor: 'pointer',
             margin: '23px'
         }}>EDIT</button>
-        <button onClick={remove} style={{
+        <button onClick={() => setDeleteData(per)} style={{
             width: '200px',
             backgroundColor: '#00bcd4',
             height: '80px',
