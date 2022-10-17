@@ -1,4 +1,22 @@
-function Line  ({pr}) {
+import { useEffect, useState } from "react";
+import { destroy } from "../Functions/localStorage";
+
+function Line  ({pr, setProduct, setModalData}) {
+
+const [deleteData, setDeleteData] = useState(null);
+const key = 'product';
+
+
+useEffect(() => {
+  if (null === deleteData) {
+    return;
+  }
+  destroy(key, deleteData.id);
+  setProduct(Date.now());
+}, [deleteData]);
+
+
+
     return (
       <div className="box6">
 <div className="centr">
@@ -21,14 +39,14 @@ function Line  ({pr}) {
       <div style={{
         display: 'flex'
       }}>
-       <button style={{
+       <button onClick={() => setModalData(pr)} style={{
         height: '80px',
         width: '160px',
         backgroundColor: 'orangered',
         cursor: 'pointer',
         marginRight: '0'
       }}>EDIT</button> 
-      <button style={{
+      <button onClick={() => setDeleteData(pr)} style={{
         height: '80px',
         width: '160px',
         backgroundColor: '#00bcd4',
