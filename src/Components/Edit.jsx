@@ -43,13 +43,13 @@ const [weight, setWeight] = useState("");
       <div className="middle" style={{
         justifyContent: 'flex-end',
         marginRight: '434px',
-        marginTop: '40px'
+        marginTop: '-1331px'
       }}>
       <div className="left">
           <h1>EDIT PRODUCT</h1>
           <div className="inside">
           <label>Product name:</label>
-          <input type='text' value={pr}   
+          <input type='text' value={pr} onChange={(e) => setPr(e.target.value)}  
           placeholder="Please, write product name..."
           style={{
               width: '400px',

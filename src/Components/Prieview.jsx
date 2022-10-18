@@ -70,7 +70,7 @@ useEffect(() => {
       border: '1px solid black',
       justifyContent: 'center'
     }}>
-    <select value={selectProduct1}  onChange={(e) => setSelectProduct1(prevVal => [...prevVal, Number(e.target.value)])} 
+    <select value={0}  onChange={(e) => setSelectProduct1(prevVal => [...prevVal, Number(e.target.value)])} 
        style={{
            width: '1300px',
            height: '50px',
@@ -155,7 +155,7 @@ useEffect(() => {
       border: '1px solid black',
       justifyContent: 'center'
      }}>
-     <select value={product}  onChange={(e) => setSelectProduct(prevVal => [...prevVal, Number(e.target.value)])}  
+     <select value={0}  onChange={(e) => setSelectProduct(prevVal => [...prevVal, Number(e.target.value)])}  
         style={{
             width: '1300px',
             height: '50px',
@@ -240,7 +240,7 @@ useEffect(() => {
       border: '1px solid black',
       justifyContent: 'center'
     }}>
-    <select value={product}  onChange={(e) => setSelectProduct2(prevVal => [...prevVal, Number(e.target.value)])} 
+    <select value={0}  onChange={(e) => setSelectProduct2(prevVal => [...prevVal, Number(e.target.value)])} 
        style={{
            width: '1300px',
            height: '50px',
