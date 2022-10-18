@@ -138,13 +138,6 @@ const dinner1 = (dinner/100*90).toFixed(2);
       padding: '10px'
     }}>{per.info}</div>
     <div>
-        <button  style={{
-            width: '200px',
-            backgroundColor: 'red',
-            height: '80px',
-            cursor: 'pointer',
-            margin: '23px'
-        }}>EDIT</button>
         <button onClick={() => setDeleteData(per)} style={{
             width: '200px',
             backgroundColor: '#00bcd4',

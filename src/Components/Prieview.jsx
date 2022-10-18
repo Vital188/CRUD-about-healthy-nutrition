@@ -2,6 +2,8 @@ import Listas from "./Personal/Listas";
 import { useState, useEffect } from "react";
 import { read} from '../Functions/localStorage';
 import Linetwo from "./Linetwo";
+import Linethree from "./Linethree";
+import Linefour from "./Linefour";
 
 
 
@@ -93,7 +95,7 @@ useEffect(() => {
      <div className="box2">Delete</div>
     </div>
          {
-         selectProduct1.length > 0 && selectProduct1?.map(selectedID => product.filter(pr =>  pr.id === selectedID).map(pra => <Linetwo key={pra.id} pr={pra} sl={setSelectProduct1} sal={selectProduct1} prod={setProduct}/>))
+         selectProduct1.length > 0 && selectProduct1?.map(selectedID => product.filter(pr =>  pr.id === selectedID).map(pra => <Linetwo key={pra.id} pr={pra} setSelectProduct1={setSelectProduct1} selectProduct1={selectProduct1} prod={setProduct} selectedID={selectedID} setProduct={setProduct}/>))
         }
     </div>
 
@@ -138,7 +140,6 @@ useEffect(() => {
     fontSize: '16px',
     margin: '27px',
     backgroundColor: 'orange',
-    fontSize: '16px',
     bordeRradius: '10px',
   }}>DELETE ALL</button> 
   </div> 
@@ -180,7 +181,7 @@ useEffect(() => {
      </div>
         {   
          //selectProduct1.length > 0 && product?.filter(pr => selectProduct1.includes(pr.id))?.map((pr) => (<Linetwo key={pr.id} pr={pr}/>)) 
-         selectProduct.length > 0 && selectProduct?.map(selectedID => product.filter(pr =>  pr.id === selectedID).map(pra => <Linetwo key={pra.id} pr={pra}/>))
+         selectProduct.length > 0 && selectProduct?.map(selectedID => product.filter(pr =>  pr.id === selectedID).map(pra => <Linethree key={pra.id} pr={pra} setSelectProduct={setSelectProduct}/>))
         } 
      </div>
      <div className="box6" style={{
@@ -224,7 +225,6 @@ useEffect(() => {
     fontSize: '16px',
     margin: '27px',
     backgroundColor: 'orange',
-    fontSize: '16px',
     bordeRradius: '10px',
   }}>DELETE ALL</button>
   </div> 
@@ -266,7 +266,7 @@ useEffect(() => {
     </div>
         {   
          //selectProduct1.length > 0 && product?.filter(pr => selectProduct1.includes(pr.id))?.map((pr) => (<Linetwo key={pr.id} pr={pr}/>)) 
-         selectProduct2.length > 0 && selectProduct2?.map(selectedID => product.filter(pr =>  pr.id === selectedID).map(pra => <Linetwo key={pra.id} pr={pra}/>))
+         selectProduct2.length > 0 && selectProduct2?.map(selectedID => product.filter(pr =>  pr.id === selectedID).map(pra => <Linefour key={pra.id} pr={pra} setSelectProduct2={setSelectProduct2}/>))
         }  
     </div>
     <div className="box6" style={{

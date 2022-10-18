@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react";
-import { destroy } from "../Functions/localStorage";
 
-function Linetwo ({pr, sal, sl, prod}) {
 
-// const [produc, setProduc] = useState(pr);
-// key = 'product'
+function Linetwo ({pr, setSelectProduct1}) {
 
-// const remove = () => {
-// prod('')
-// }
 
-console.log(prod)
+// const selection = selectProduct1.find(selpr => Number(selpr) === selectedID)
+
+const remove = () => {
+setSelectProduct1(prev=> prev.filter(el => el !== pr.id))
+};
+
+
+
 
 
     return (
@@ -29,7 +29,7 @@ console.log(prod)
      <div className="box2">{pr.calories}</div>
      <div className="box2">{pr.weight}</div>
       <div className="box2" >
-      <button 
+      <button onClick={remove}
    style={{
     width: '143px',
     height: '50px',

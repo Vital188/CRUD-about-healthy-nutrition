@@ -22,8 +22,8 @@ function New() {
 
     const handleEnter = (e) => {
         console.log(e.key)
-        if (e.key === "Delete")
-        {setProduct('')}
+        if (e.key === "Enter")
+        {setProduct(e.target.value)}
        }
 
     return (
